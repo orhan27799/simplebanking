@@ -14,3 +14,17 @@ response would be (200):
 }
 
 
+curl --location --request POST 'http://localhost:8080/account/v1/debit/669-7788' \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--data-raw '    {
+        "amount": 50.0
+    }'
+
+response would be (200):
+{
+    "status": "OK",
+    "approvalCode": "a66cce54-335b-4e46-9b49-05017c4b38dd"
+}
+
+
